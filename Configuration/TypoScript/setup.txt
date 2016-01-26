@@ -1,0 +1,49 @@
+config.compressJs = 0
+config.concatenateJs = 0
+
+################
+#### CONFIG ####
+################
+config {
+    language = fr
+    locale_all = fr_FR.UTF-8
+    htmlTag_setParams = lang="fr" dir="ltr" class="no-js"
+}
+
+#################
+#### tx_news ####
+#################
+plugin.tx_news {
+
+    /*
+	settings {
+        facebookLocale = fr_FR
+        googlePlusLocale = fr
+        disqusLocale = fr
+
+        detail {
+            showSocialShareButtons = 0
+            disqusShortname = devpradinesfr
+        }
+    }
+	*/
+
+    view {
+        widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = EXT:news_gabarits/Resources/Private/Templates/News/
+        templateRootPaths > 
+        templateRootPaths {
+            0 = EXT:news/Resources/Private/Templates/
+            1 = EXT:news_gabarits/Resources/Private/Templates/News/
+        }
+        partialRootPaths >
+        partialRootPaths {
+            0 = EXT:news/Resources/Private/Partials/
+            1 = EXT:news_gabarits/Resources/Private/Partials/News/
+        }
+        layoutRootPaths >
+        layoutRootPaths {
+            0 = EXT:news/Resources/Private/Layouts/
+#            1 = EXT:news_gabarits/Resources/Private/Layouts/
+        }
+    }
+}

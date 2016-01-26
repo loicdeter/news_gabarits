@@ -1,0 +1,28 @@
+############
+### PAGE ###
+############
+page {
+	fluidtemplate {
+		# cat=bootstrap package: advanced/100/100; type=string; label=Layout Root Path: Path to layouts
+		layoutRootPath = EXT:news_gabarits/Resources/Private/Layouts/Page/
+		# cat=bootstrap package: advanced/100/110; type=string; label=Partial Root Path: Path to partials
+		partialRootPath = EXT:news_gabarits/Resources/Private/Partials/Page/
+		# cat=bootstrap package: advanced/100/120; type=string; label=Template Root Path: Path to templates
+		templateRootPath = EXT:news_gabarits/Resources/Private/Templates/Page/
+	}
+
+	/*
+	theme {
+		# cat=bootstrap package: basic/160/102; type=options[Wire=, Boxed=boxed]; label=Wide style
+		navigationwide = 
+		# cat=bootstrap package: basic/160/103; type=options[Default=, Transition=transition]; label=Transition style
+		navigationtransition = 
+	}
+	*/
+}
+##############
+### CONFIG ###
+##############
+config {
+	headerComment = Maintenu par le CDG 46 : https://www.cdg46.fr
+}
