@@ -1,0 +1,41 @@
+{namespace n=GeorgRinger\News\ViewHelpers}
+<f:layout name="General" />
+<!--
+	=====================
+		Templates/News/List.html
+-->
+<v:variable.set(name: 'prevMonth', value: '')></v:variable.set>
+<f:section name="content">
+	<f:if condition="{news}">
+		<f:then>
+			<div class="container container-timeline"">
+				<div class="row">
+					<div class="hr-timeline-center">
+						<div class="col-sm-12">
+
+							<f:if condition="{settings.hidePagination}">
+								<f:then>
+									<f:for each="{news}" as="newsItem" iteration="iterator">
+										<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator, prevMont: prevMonth}" />
+									</f:for>
+								</f:then>
+								<f:else>
+									<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
+									<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+										<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator, prevMont: prevMonth}" />
+									</f:for>
+								</n:widget.paginate>
+								</f:else>
+							</f:if>
+						</div>
+					</div>
+				</div>
+			</div>
+		</f:then>
+		<f:else>
+			<div class="no-news-found">
+				<f:translate key="list_nonewsfound" />
+			</div>
+		</f:else>
+	</f:if>
+</f:section>
