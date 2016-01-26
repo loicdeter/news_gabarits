@@ -35,7 +35,7 @@
             <f:then>
                 <f:if condition="{newsItem.mediaPreviews}">
                     <f:then>
-			<n:link newsItem="{newsItem}" settings="{settings}" title="Ouvrir {newsItem.title}">
+						<n:link newsItem="{newsItem}" settings="{settings}" title="Ouvrir {newsItem.title}">
                             <f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
                                 <f:if condition="{mediaElement.type} == 0">
                                     <f:image src="uploads/tx_news/{mediaElement.image}" title="{mediaElement.title}" alt="{mediaElement.alt}"  class="img-responsive full-width"/>
@@ -47,7 +47,7 @@
                                     <f:render partial="Detail/MediaHtml" arguments="{mediaElement: mediaElement}"/>
                                 </f:if>
                             </f:alias>
-			</n:link>
+						</n:link>
                     </f:then>
                     <f:else>
                         <f:if condition="{settings.displayDummyIfNoMedia}">
@@ -76,7 +76,6 @@
     </h3>
 
     <p class="text-theme-sm">
-
         <f:if condition="{newsItem.teaser}">
             <f:then>
                 {newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
