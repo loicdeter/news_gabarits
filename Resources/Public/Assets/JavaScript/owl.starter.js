@@ -1,3 +1,3 @@
 $(document).ready(function(){
-	$('div[id^="#carousel-"]').owlCarousel();
+    $('div[id^="#carousel-"]').owlCarousel();
 });
