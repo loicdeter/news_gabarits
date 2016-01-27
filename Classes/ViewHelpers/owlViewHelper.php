@@ -1,4 +1,6 @@
 <?php
+namespace CDG46\ews_gabarit\Classes\ViewHelper;
+
 /***************************************************************
 *  Copyright notice
 *
@@ -23,11 +25,10 @@
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
-namespace CDG46\ews_gabarit\Classes\ViewHelper;
 use \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
- * Class 
+ * Class owlViewHelper
  * 
  * @author Loïc de Terwangne <loic.deterwangne@gmail.com>
  * @package ViewHelpers
@@ -40,7 +41,7 @@ class owlViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper 
     public function render(){
         $PageRenderer = TYPO3\CMS\Core\Page\PageRenderer::makeInstance('PageRenderer');
 
-        $file = "owl.starter.js";
+        $file = "EXT/Resources/Assets/JavaScript/owl.starter.js";
         $PageRenderer->addJsFooterFile($file);
     }
 }
