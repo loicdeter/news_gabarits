@@ -50,7 +50,7 @@
                 <f:case value="500">
                     <!-- Carousel Background -->
                     <div id="background-carousel">
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-ride="carousel" data-pause="false">
                             <div class="carousel-inner">
                                 <f:for each="{news}" as="newsItem" iteration="iterator">
                                     <f:render partial="List/ItemBackgroundCarousel" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
@@ -62,7 +62,7 @@
                 </f:case>
                 <f:case value="501">
                     <!-- Carousel Fulsize Header -->
-                    <div id="myCarousel" class="carousel slide">  
+                    <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">  
                         <div class="carousel-inner">
                             <f:for each="{news}" as="newsItem" iteration="iterator">
                                 <div class="item">
@@ -71,10 +71,10 @@
                             </f:for>
                         </div>
                         <!-- Controls -->
-                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <a class="left carousel-control" href="#carousel-{contentObjectData.uid}" data-slide="prev">
                             <span class="fa fa-chevron-left fa-2x"></span>
                         </a>
-                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <a class="right carousel-control" href="#carousel-{contentObjectData.uid}" data-slide="next">
                             <span class="fa fa-chevron-right fa-2x"></span>
                         </a>  
                     </div>
@@ -86,7 +86,7 @@
                 <f:case value="511">
                     <!-- Carousel Simple Caption -->
                     <div class="container">
-                        <div id="myCarousel" class="carousel slide">
+                        <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">
                             <div class="carousel-inner">           
                                 <f:for each="{news}" as="newsItem" iteration="iterator">
                                     <div class="item">
@@ -95,8 +95,8 @@
                                 </f:for>
                             </div>          
                             <div class="carousel-controls">
-                                <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="fa fa-angle-double-left fa-lg"></i></a>
-                                <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="fa fa-angle-double-right fa-lg"></i></a>
+                                <a class="left carousel-control" href="#carousel-{contentObjectData.uid}" data-slide="prev"><i class="fa fa-angle-double-left fa-lg"></i></a>
+                                <a class="right carousel-control" href="#carousel-{contentObjectData.uid}" data-slide="next"><i class="fa fa-angle-double-right fa-lg"></i></a>
                             </div>
                         </div>   
                     </div>
@@ -105,7 +105,7 @@
                 <f:case value="512">
                     <!-- Full-Feature Carousel -->
                     <div class="container">
-                        <div id="myCarousel" class="carousel slide">
+                        <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">
                             <div class="carousel-inner">
                                 <f:for each="{news}" as="newsItem" iteration="iterator">
                                     <article class="item">
@@ -122,10 +122,10 @@
                             <!-- Indicators -->
                             <!-- Controls -->
                             <div class="carousel-controls">
-                                <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                                <a class="carousel-control left" href="#carousel-{contentObjectData.uid}" data-slide="prev">
                                     <span class="fa fa-angle-double-left"></span>
                                 </a>
-                                <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                                <a class="carousel-control right" href="#carousel-{contentObjectData.uid}" data-slide="next">
                                     <span class="fa fa-angle-double-right"></span>
                                 </a>
                             </div>
@@ -136,7 +136,7 @@
                 <f:case value="513">
                     <!--  -->
                     <div class="container">
-                        <div class="carousel slide article-slide" id="myCarousel">
+                        <div class="carousel slide article-slide" id="carousel-{contentObjectData.uid}">
                             <div class="carousel-inner cont-slider">
                                 <f:for each="{news}" as="newsItem" iteration="iterator">
                                     <article class="item">
@@ -163,7 +163,7 @@
                             <div class="col-md-3">
                                 <!-- Carousel
                                 ================================================== -->
-                                <div id="myCarousel" class="carousel slide">
+                                <div id="carousel-{contentObjectData.uid}" class="carousel slide">
                                     <!-- Indicators -->
                                     <ol class="carousel-indicators">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
@@ -191,7 +191,7 @@
                             <div class="col-md-3">
                                 <!-- Carousel
                                 ================================================== -->
-                                <div id="myCarousel" class="carousel slide">
+                                <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">
                                     <!-- Indicators -->
                                         <ol class="carousel-indicators">
                                             <f:for each="{news}" as="newsItem" iteration="iterator">
@@ -219,7 +219,7 @@
                             <div class="col-md-3">
                                 <!-- Carousel
                                 ================================================== -->
-                                <div id="myCarousel" class="carousel slide">
+                                <div id="carousel-{contentObjectData.uid}" class="carousel slide">
                                     <div class="carousel-inner">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
                                         <figure class="item">
@@ -252,7 +252,7 @@
                             <div class="col-md-3">
                                 <!-- Carousel
                                 ================================================== -->
-                                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-ride="carousel">
                                 
                                     <div class="carousel-inner">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
@@ -263,8 +263,8 @@
                                     </div><!-- End Carousel Inner -->
                                   
                                     <div class="carousel-controls">
-                                        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-                                        <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                                        <a class="left carousel-control" href="#carousel-{contentObjectData.uid}" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                                        <a class="right carousel-control" href="#carousel-{contentObjectData.uid}" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
                                     </div>
                                 </div><!-- /.carousel -->
                             </div>
@@ -280,7 +280,7 @@
                                 <h3>Headline</h3>
                                 <!-- Carousel
                                 ================================================== -->
-                                <div id="myCarousel" class="carousel slide">
+                                <div id="carousel-{contentObjectData.uid}" class="carousel slide">
                                     <div class="carousel-inner">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
                                             <figure class="item">
@@ -294,8 +294,8 @@
                                             <img class="thumbnail" src="http://placehold.it/300x200/" alt="slide3">
                                         </figure>
                                     </div>
-                                    <a class="carousel-control left" href="#myCarousel" data-slide="prev"><i class="fa fa-angle-double-left"></i></a>
-                                    <a class="carousel-control right" href="#myCarousel" data-slide="next"><i class="fa fa-angle-double-right"></i></a>                                   
+                                    <a class="carousel-control left" href="#carousel-{contentObjectData.uid}" data-slide="prev"><i class="fa fa-angle-double-left"></i></a>
+                                    <a class="carousel-control right" href="#carousel-{contentObjectData.uid}" data-slide="next"><i class="fa fa-angle-double-right"></i></a>                                   
                                 </div><!-- End Carousel -->  
                             </div>
                         </div>
@@ -309,7 +309,7 @@
                             <div class="well">
                                 <!-- Carousel
                                 ================================================== -->            
-                                <div id="myCarousel" class="carousel slide">
+                                <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">
                                     <div class="carousel-inner">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
                                             <div class="item">
@@ -330,8 +330,8 @@
                                             </div>
                                         </f:for>
                                     </div>
-                                    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
-                                    <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
+                                    <a class="left carousel-control" href="#carousel-{contentObjectData.uid}" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
+                                    <a class="right carousel-control" href="#carousel-{contentObjectData.uid}" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
                                     
                                     <ol class="carousel-indicators">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
@@ -351,7 +351,7 @@
                             <div class="well">
                                 <!-- Carousel
                                 ================================================== -->            
-                                <div id="myCarousel" class="carousel slide">
+                                <div id="carousel-{contentObjectData.uid}" class="carousel slide">
                                     <div class="carousel-inner">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
                                             <div class="item">
@@ -380,8 +380,8 @@
                                             </div>
                                         </f:for>
                                     </div>
-                                    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
-                                    <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
+                                    <a class="left carousel-control" href="#carousel-{contentObjectData.uid}" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
+                                    <a class="right carousel-control" href="#carousel-{contentObjectData.uid}" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
                                     
                                     <ol class="carousel-indicators">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
@@ -401,7 +401,7 @@
                             <div class="col-md-6">
                                 <!-- Carousel
                                 ================================================== -->
-                                <div id="myCarousel" class="carousel slide">
+                                <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">
                                     <!-- Indicators -->
                                     <div class="carousel-inner">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
@@ -411,8 +411,8 @@
                                         </f:for>
                                     </div>
                                     <div class="carousel-controls">
-                                        <a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="fa fa-angle-double-left"></span></a>
-                                        <a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="fa fa-angle-double-right"></span></a>
+                                        <a class="carousel-control left" href="#carousel-{contentObjectData.uid}" data-slide="prev"><span class="fa fa-angle-double-left"></span></a>
+                                        <a class="carousel-control right" href="#carousel-{contentObjectData.uid}" data-slide="next"><span class="fa fa-angle-double-right"></span></a>
                                     </div>
                                 </div><!-- End Carousel -->  
                             </div>
@@ -423,7 +423,7 @@
                 <f:case value="541">
                     <!-- Carousel Tabbed Slider -->
                     <div class="container">
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-ride="carousel">
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner">
                                 <f:for each="{news}" as="newsItem" iteration="iterator">
@@ -454,7 +454,7 @@
                             <div class="col-md-4">
                                 <!-- Carousel
                                 ================================================== -->
-                                <div id="myCarousel" class="carousel slide">        
+                                <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">        
                                     <div class="carousel-inner">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
                                             <div class="item">
