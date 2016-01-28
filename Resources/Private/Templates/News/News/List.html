@@ -81,7 +81,39 @@
                     <!-- Fin Carousel Fulsize Header -->
                 </f:case>
                 <f:case value="510">
-                
+                    <!-- Carousel News Carousel -->
+                    <div class="container">
+                        <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-ride="carousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <f:for each="{news}" as="newsItem" iteration="iterator">
+                                    <div class="item">
+                                        <f:render partial="List/ItemNewsCarousel" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                    </div><!-- End Item -->
+                                </f:for>
+                            </div><!-- End Carousel Inner -->
+
+                        <ul class="list-group col-sm-4">
+                          <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active"><h4>Lorem ipsum dolor sit amet consetetur sadipscing</h4></li>
+                          <li data-target="#myCarousel" data-slide-to="1" class="list-group-item"><h4>consetetur sadipscing elitr, sed diam nonumy eirmod</h4></li>
+                          <li data-target="#myCarousel" data-slide-to="2" class="list-group-item"><h4>tempor invidunt ut labore et dolore</h4></li>
+                          <li data-target="#myCarousel" data-slide-to="3" class="list-group-item"><h4>magna aliquyam erat, sed diam voluptua</h4></li>
+                          <li data-target="#myCarousel" data-slide-to="4" class="list-group-item"><h4>tempor invidunt ut labore et dolore magna aliquyam erat</h4></li>
+                        </ul>
+
+                          <!-- Controls -->
+                          <div class="carousel-controls">
+                              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                              </a>
+                              <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                              </a>
+                          </div>
+
+                        </div><!-- End Carousel -->
+                    </div>
+                    <!-- Fin Carousel News Carousel -->
                 </f:case>
                 <f:case value="511">
                     <!-- Carousel Simple Caption -->

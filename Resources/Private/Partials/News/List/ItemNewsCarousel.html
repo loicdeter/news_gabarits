@@ -1,6 +1,6 @@
 {namespace n=GeorgRinger\News\ViewHelpers}<!--
     =====================
-        Partials/List/ItemBAckgroundCarousel.html
+        Partials/List/ItemNewsCarousel.html
 -->
 
 <n:excludeDisplayedNews newsItem="{newsItem}"/>
@@ -74,3 +74,20 @@
 
     </f:else>
 </f:if>
+<div class="carousel-caption">
+    <h4>
+        <n:link newsItem="{newsItem}" settings="{settings}" title="Ouvrir {newsItem.title}">
+            {newsItem.title}
+        </n:link>
+    </h4>
+    <p>
+        <f:if condition="{newsItem.teaser}">
+            <f:then>
+                {newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
+            </f:then>
+            <f:else>
+                {newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
+            </f:else>
+        </f:if>
+    </p>
+</div>

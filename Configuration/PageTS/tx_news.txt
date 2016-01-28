@@ -1,0 +1,21 @@
+tx_news.templateLayouts {
+    100 = Carousel
+    200 = Multiple Slides
+    300 = ItemInfo
+    500 = Background Carousel
+    501 = Fullsize Header
+    510 = News Carousel
+    511 = Simple Caption
+    512 = Full-Feature Carousel
+    513 = Thumbnail Navigation
+    520 = Simple Indicators
+    521 = Simple Controls
+    522 = Numbered Indicators
+    523 = Label Products
+    524 = Header Controls
+    530 = Boxed Thumbnails
+    531 = Product Slide
+    540 = Testimonial Carousel
+    541 = Tabbed Slider
+    542 = News Box
+}
