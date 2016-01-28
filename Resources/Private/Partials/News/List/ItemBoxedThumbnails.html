@@ -1,6 +1,6 @@
 {namespace n=GeorgRinger\News\ViewHelpers}<!--
     =====================
-        Partials/List/ItemMultipleSlides.html
+        Partials/List/ItemBoxedThumbnails.html
 -->
 
 <n:excludeDisplayedNews newsItem="{newsItem}"/>
@@ -12,7 +12,7 @@
                 <n:link newsItem="{newsItem}" settings="{settings}" title="Ouvrir {newsItem.title}">
                     <f:alias map="{mediaElement: newsItem.falMediaPreviews.0}">
                         <f:if condition="{mediaElement.originalResource.type} == 2">
-                            <f:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}"  class="img-responsive"/>
+                            <f:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" class="img-responsive full-width"/>
                         </f:if>
                         <f:if condition="{mediaElement.originalResource.type} == 4">
                             <f:render partial="Detail/FalMediaVideo" arguments="{mediaElement: mediaElement}"/>
@@ -22,7 +22,9 @@
             </f:then>
             <f:else>
                 <f:if condition="{settings.displayDummyIfNoMedia}">
-                        <f:image src="{settings.list.media.dummyImage}" title="" alt=""  class="img-responsive"/>
+                    <n:link newsItem="{newsItem}" settings="{settings}" title="Ouvrir {newsItem.title}">
+                        <f:image src="{settings.list.media.dummyImage}" title="" alt="" class="img-responsive full-width"/>
+                    </n:link>
                 </f:if>
             </f:else>
         </f:if>
@@ -38,7 +40,7 @@
                         <n:link newsItem="{newsItem}" settings="{settings}" title="Ouvrir {newsItem.title}">
                             <f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
                                 <f:if condition="{mediaElement.type} == 0">
-                                    <f:image src="uploads/tx_news/{mediaElement.image}" title="{mediaElement.title}" alt="{mediaElement.alt}"  class="img-responsive"/>
+                                    <f:image src="uploads/tx_news/{mediaElement.image}" title="{mediaElement.title}" alt="{mediaElement.alt}" class="img-responsive full-width"/>
                                 </f:if>
                                 <f:if condition="{mediaElement.type} == 1">
                                     <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>
@@ -51,7 +53,9 @@
                     </f:then>
                     <f:else>
                         <f:if condition="{settings.displayDummyIfNoMedia}">
-                                <f:image src="{settings.list.media.dummyImage}" title="" alt=""  class="img-responsive"/>
+                            <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+                                <f:image src="{settings.list.media.dummyImage}" title="" alt="" class="img-responsive full-width"/>
+                            </n:link>
                         </f:if>
                     </f:else>
                 </f:if>
@@ -60,7 +64,9 @@
             <f:else>
                 <f:if condition="{settings.displayDummyIfNoMedia}">
                     <f:then>
-                            <f:image src="{settings.list.media.dummyImage}" title="" alt=""  class="img-responsive"/>
+                        <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+                            <f:image src="{settings.list.media.dummyImage}" title="" alt="" class="img-responsive full-width"/>
+                        </n:link>
                     </f:then>
                 </f:if>
             </f:else>
@@ -68,20 +74,3 @@
 
     </f:else>
 </f:if>
-    <h3 class="text-uppercase text-theme" title-xs>
-        <n:link newsItem="{newsItem}" settings="{settings}" title="Ouvrir {newsItem.title}">
-            {newsItem.title}
-        </n:link>
-    </h3>
-
-    <p class="text-theme">
-
-        <f:if condition="{newsItem.teaser}">
-            <f:then>
-                {newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
-            </f:then>
-            <f:else>
-                {newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
-            </f:else>
-        </f:if>
-    </p>
