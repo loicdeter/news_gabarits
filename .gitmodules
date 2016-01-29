@@ -1,0 +1,3 @@
+[submodule "evalmath.class.php"]
+	path = Contrib/evalmath.class.php/
+	url = https://github.com/Itangalo/evalmath.class.php.git

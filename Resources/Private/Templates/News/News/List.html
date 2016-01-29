@@ -1,4 +1,5 @@
 {namespace n=GeorgRinger\News\ViewHelpers}
+{namespace m=CDG46\News\ViewHelpers}
 <f:layout name="General" />
 <!--
     =====================
@@ -386,7 +387,7 @@
                                             <f:cycle values="{0: '1', 1:'', 2:'', 3:''}" as="indicator">
                                                 <f:if condition="{indicator} == 1">
                                                     <f:then>
-                                                        <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index} / 4"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
+                                                        <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{m:matheval(argument: 'iterator.index'/4)}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
                                                     </f:then>
                                                 </f:if>
                                             </f:cycle>
@@ -462,7 +463,7 @@
                                             <f:cycle values="{0: '1', 1:'', 2:'', 3:''}" as="indicator">
                                                 <f:if condition="{indicator} == 1">
                                                     <f:then>
-                                                        <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}/4"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
+                                                        <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{m:matheval(argument: 'iterator.index'/4)}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
                                                     </f:then>
                                                 </f:if>
                                             </f:cycle>
