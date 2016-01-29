@@ -351,7 +351,7 @@
                                                 mod 4 == 0 => condition renvoi 0
                                                 mod 4 != 0 => condition renvoi 1
                                             </f:comment>
-                                            <f:if condition="{iterator.cycle % 4}">
+                                            <f:if condition="{iterator.cycle} % 4">
                                                 <f:then>
                                                     <f:if condition="{iterator.isLast}">
                                                         <f:then>
@@ -421,7 +421,7 @@
                                                 mod 4 == 0 => condition renvoi 0
                                                 mod 4 != 0 => condition renvoi 1
                                             </f:comment>
-                                            <f:if condition="{iterator.cycle % 4}">
+                                            <f:if condition="{iterator.cycle} % 4">
                                                 <f:then>
                                                     <f:if condition="{iterator.isLast}">
                                                         <f:then>
