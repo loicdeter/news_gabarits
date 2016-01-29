@@ -383,7 +383,13 @@
                                     
                                     <ol class="carousel-indicators">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
-                                            <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
+                                            <f:cycle values="{0: '1', 1:"", 2:"", 3:""}" as="indicator">
+                                                <f:if condition="{indicator} == 1">
+                                                    <f:then>
+                                                        <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index} / 4"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
+                                                    </f:then>
+                                                </f:if>
+                                            </f:cycle>
                                         </f:for>
                                     </ol>                
                                 </div><!-- End Carousel --> 
@@ -453,7 +459,13 @@
                                     
                                     <ol class="carousel-indicators">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
-                                            <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
+                                            <f:cycle values="{0: '1', 1:"", 2:"", 3:""}" as="indicator">
+                                                <f:if condition="{indicator} == 1">
+                                                    <f:then>
+                                                        <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}/4"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
+                                                    </f:then>
+                                                </f:if>
+                                            </f:cycle>
                                         </f:for>
                                     </ol>                
                                 </div><!-- End Carousel --> 
