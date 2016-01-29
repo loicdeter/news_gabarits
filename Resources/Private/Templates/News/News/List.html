@@ -335,22 +335,47 @@
                                 <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">
                                     <div class="carousel-inner">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
-                                            <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <f:render partial="List/ItemBoxedThumbnails" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <f:render partial="List/ItemBoxedThumbnails" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <f:render partial="List/ItemBoxedThumbnails" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <f:render partial="List/ItemBoxedThumbnails" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                                                    </div>
-                                                </div>
+                                            
+                                            <f:if condition="{iterator.isFirst}">
+                                                <f:then>
+                                                    <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
+                                                        <div class="row">
+                                                </f:then>
+                                            </f:if>
+                                            
+                                            <div class="col-md-3">
+                                                <f:render partial="List/ItemBoxedThumbnails" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
                                             </div>
+                                            
+                                            <f:comment>
+                                                mod 4 == 0 => condition renvoi 0
+                                                mod 4 != 0 => condition renvoi 1
+                                            </f:comment>
+                                            <f:if condition="{iterator.cycle % 4}">
+                                                <f:then>
+                                                    <f:if condition="{iterator.isLast}">
+                                                        <f:then>
+                                                                </div>
+                                                            </div>
+                                                        </f:then>
+                                                    </f:if>
+                                                </f:then>
+                                                <f:else>
+                                                    <f:if condition="{iterator.isLast}">
+                                                        <f:then>
+                                                                </div>
+                                                            </div>
+                                                        </f:then>
+                                                        <f:else>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="row">
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:else>
+                                            </f:if>
+                                            
                                         </f:for>
                                     </div>
                                     <a class="left carousel-control" href="#twbs-carousel-{contentObjectData.uid}" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
@@ -377,30 +402,50 @@
                                 <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide">
                                     <div class="carousel-inner">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
-                                            <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <div class="thumbnail">
-                                                            <f:render partial="List/ItemProductSlide" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                                                        </div>        
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="thumbnail">
-                                                            <f:render partial="List/ItemProductSlide" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                                                        </div> 
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="thumbnail">
-                                                            <f:render partial="List/ItemProductSlide" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                                                        </div> 
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="thumbnail">
-                                                            <f:render partial="List/ItemProductSlide" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                                                        </div> 
-                                                    </div>
-                                                </div>
+                                        
+                                        
+                                            <f:if condition="{iterator.isFirst}">
+                                                <f:then>
+                                                    <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
+                                                        <div class="row">
+                                                </f:then>
+                                            </f:if>
+                                            
+                                             <div class="col-md-3">
+                                                <div class="thumbnail">
+                                                    <f:render partial="List/ItemProductSlide" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                                </div>        
                                             </div>
+                                            
+                                            <f:comment>
+                                                mod 4 == 0 => condition renvoi 0
+                                                mod 4 != 0 => condition renvoi 1
+                                            </f:comment>
+                                            <f:if condition="{iterator.cycle % 4}">
+                                                <f:then>
+                                                    <f:if condition="{iterator.isLast}">
+                                                        <f:then>
+                                                                </div>
+                                                            </div>
+                                                        </f:then>
+                                                    </f:if>
+                                                </f:then>
+                                                <f:else>
+                                                    <f:if condition="{iterator.isLast}">
+                                                        <f:then>
+                                                                </div>
+                                                            </div>
+                                                        </f:then>
+                                                        <f:else>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="row">
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:else>
+                                            </f:if>
+                                            
                                         </f:for>
                                     </div>
                                     <a class="left carousel-control" href="#twbs-carousel-{contentObjectData.uid}" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
