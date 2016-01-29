@@ -1,5 +1,5 @@
 <?php
-namespace CDG46\ews_gabarit\Classes\ViewHelper;
+namespace CDG46\News\Classes\ViewHelper;
 
 /***************************************************************
 *  Copyright notice
