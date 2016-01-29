@@ -11,11 +11,11 @@
                 <f:case value="100">
                     <!-- SLIDER -->
                     <div class="wrapper-slider">
-                        <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide" data-ride="carousel" data-interval="false">
                            <!-- Indicators -->
                            <ol class="carousel-indicators">
                                <f:for each="{news}" as="newsItem" iteration="iterator">
-                                   <li data-target="#carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
+                                   <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
                                </f:for>
                            </ol>
                            <!-- Indicators -->
@@ -28,10 +28,10 @@
                                 </f:for>
                             </div>
                             <!-- Controls -->
-                            <a href="#carousel-{contentObjectData.uid}" role="button" data-slide="prev">
+                            <a href="#twbs-carousel-{contentObjectData.uid}" role="button" data-slide="prev">
                                 <i class="fa fa-angle-left fa-2x btn-prev"></i>
                             </a>
-                            <a href="#carousel-{contentObjectData.uid}" role="button" data-slide="next">
+                            <a href="#twbs-carousel-{contentObjectData.uid}" role="button" data-slide="next">
                                 <i class="fa fa-angle-right fa-2x btn-next"></i>
                             </a>
                         </div>
@@ -41,7 +41,7 @@
                 <f:case value="200">
                     <div id="owl-ortfolio-item-{contentObjectData.uid}" class="owl-carousel">
                         <f:for each="{news}" as="newsItem" iteration="iterator">
-                            <div class="item">
+                            <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
                                 <f:render partial="List/ItemMultipleSlides" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
                             </div>
                         </f:for>
@@ -50,7 +50,7 @@
                 <f:case value="500">
                     <!-- Carousel Background -->
                     <div id="background-carousel">
-                        <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-ride="carousel" data-pause="false">
+                        <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide" data-ride="carousel" data-pause="false">
                             <div class="carousel-inner">
                                 <f:for each="{news}" as="newsItem" iteration="iterator">
                                     <f:render partial="List/ItemBackgroundCarousel" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
@@ -62,19 +62,19 @@
                 </f:case>
                 <f:case value="501">
                     <!-- Carousel Fulsize Header -->
-                    <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">  
+                    <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">  
                         <div class="carousel-inner">
                             <f:for each="{news}" as="newsItem" iteration="iterator">
-                                <div class="item">
+                                <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
                                     <f:render partial="List/ItemFullsizeHeader" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
                                 </div>
                             </f:for>
                         </div>
                         <!-- Controls -->
-                        <a class="left carousel-control" href="#carousel-{contentObjectData.uid}" data-slide="prev">
+                        <a class="left carousel-control" href="#twbs-carousel-{contentObjectData.uid}" data-slide="prev">
                             <span class="fa fa-chevron-left fa-2x"></span>
                         </a>
-                        <a class="right carousel-control" href="#carousel-{contentObjectData.uid}" data-slide="next">
+                        <a class="right carousel-control" href="#twbs-carousel-{contentObjectData.uid}" data-slide="next">
                             <span class="fa fa-chevron-right fa-2x"></span>
                         </a>  
                     </div>
@@ -83,11 +83,11 @@
                 <f:case value="510">
                     <!-- Carousel News Carousel -->
                     <div class="container">
-                        <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-ride="carousel">
+                        <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide" data-ride="carousel">
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner">
                                 <f:for each="{news}" as="newsItem" iteration="iterator">
-                                    <div class="item">
+                                    <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
                                         <f:render partial="List/ItemNewsCarousel" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
                                     </div><!-- End Item -->
                                 </f:for>
@@ -95,7 +95,7 @@
 
                         <ul class="list-group col-sm-4">
                             <f:for each="{news}" as="newsItem" iteration="iterator">
-                                <li data-target="#carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}>
+                                <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}>
                                     <h4>
                                         {newsItem.title}
                                     </h4>
@@ -120,17 +120,17 @@
                 <f:case value="511">
                     <!-- Carousel Simple Caption -->
                     <div class="container">
-                        <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">
+                        <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">
                             <div class="carousel-inner">           
                                 <f:for each="{news}" as="newsItem" iteration="iterator">
-                                    <div class="item">
+                                    <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
                                         <f:render partial="List/ItemSimpleCaption" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
                                     </div>
                                 </f:for>
                             </div>          
                             <div class="carousel-controls">
-                                <a class="left carousel-control" href="#carousel-{contentObjectData.uid}" data-slide="prev"><i class="fa fa-angle-double-left fa-lg"></i></a>
-                                <a class="right carousel-control" href="#carousel-{contentObjectData.uid}" data-slide="next"><i class="fa fa-angle-double-right fa-lg"></i></a>
+                                <a class="left carousel-control" href="#twbs-carousel-{contentObjectData.uid}" data-slide="prev"><i class="fa fa-angle-double-left fa-lg"></i></a>
+                                <a class="right carousel-control" href="#twbs-carousel-{contentObjectData.uid}" data-slide="next"><i class="fa fa-angle-double-right fa-lg"></i></a>
                             </div>
                         </div>   
                     </div>
@@ -139,27 +139,27 @@
                 <f:case value="512">
                     <!-- Full-Feature Carousel -->
                     <div class="container">
-                        <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">
+                        <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">
                             <div class="carousel-inner">
                                 <f:for each="{news}" as="newsItem" iteration="iterator">
-                                    <article class="item">
+                                    <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
                                         <f:render partial="List/ItemFullFeatureCarousel" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                                    </article>
+                                    </div>
                                 </f:for>
                             </div>
                             <!-- Indicators -->
                             <ol class="carousel-indicators">
                                <f:for each="{news}" as="newsItem" iteration="iterator">
-                                   <li data-target="#carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
+                                   <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
                                </f:for>
                             </ol>
                             <!-- Indicators -->
                             <!-- Controls -->
                             <div class="carousel-controls">
-                                <a class="carousel-control left" href="#carousel-{contentObjectData.uid}" data-slide="prev">
+                                <a class="carousel-control left" href="#twbs-carousel-{contentObjectData.uid}" data-slide="prev">
                                     <span class="fa fa-angle-double-left"></span>
                                 </a>
-                                <a class="carousel-control right" href="#carousel-{contentObjectData.uid}" data-slide="next">
+                                <a class="carousel-control right" href="#twbs-carousel-{contentObjectData.uid}" data-slide="next">
                                     <span class="fa fa-angle-double-right"></span>
                                 </a>
                             </div>
@@ -170,17 +170,17 @@
                 <f:case value="513">
                     <!-- Carousel Thumbnail Navigation -->
                     <div class="container">
-                        <div class="carousel slide article-slide" id="carousel-{contentObjectData.uid}">
+                        <div class="carousel slide article-slide" id="twbs-carousel-{contentObjectData.uid}">
                             <div class="carousel-inner cont-slider">
                                 <f:for each="{news}" as="newsItem" iteration="iterator">
-                                    <article class="item">
+                                    <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
                                         <f:render partial="List/ItemThumbnailNavigation" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                                    </article>
+                                    </div>
                                 </f:for>
                                 <!-- Indicators -->
                                 <ol class="carousel-indicators visible-lg visible-md">
                                     <f:for each="{news}" as="newsItem" iteration="iterator">
-                                        <li data-target="#carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}>
+                                        <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}>
                                             <f:render partial="List/ItemThumbnailNavigation" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
                                         </li>
                                     </f:for>
@@ -198,19 +198,19 @@
                             <div class="col-md-3">
                                 <!-- Carousel
                                 ================================================== -->
-                                <div id="carousel-{contentObjectData.uid}" class="carousel slide">
+                                <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide">
                                     <!-- Indicators -->
                                     <ol class="carousel-indicators">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
-                                            <li data-target="#carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
+                                            <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
                                         </f:for>
                                     </ol>
                                     <!-- Indicators -->            
                                     <div class="carousel-inner">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
-                                            <figure class="item">
+                                            <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
                                                 <f:render partial="List/ItemSimpleIndicators" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                                            </figure>
+                                            </div>
                                         </f:for>                                                                                  
                                     </div>                                             
                                 </div><!-- End Carousel -->  
@@ -226,19 +226,19 @@
                             <div class="col-md-3">
                                 <!-- Carousel
                                 ================================================== -->
-                                <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">
+                                <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">
                                     <!-- Indicators -->
                                         <ol class="carousel-indicators">
                                             <f:for each="{news}" as="newsItem" iteration="iterator">
-                                            <li data-target="#carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
+                                            <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
                                         </f:for>
                                     </ol>
                                     <!-- Indicators -->
                                     <div class="carousel-inner">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
-                                            <figure class="item">
+                                            <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
                                                 <f:render partial="List/ItemSimpleControls" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                                            </figure>
+                                            </div>
                                         </f:for>
                                     </div>
                                 </div><!-- End Carousel -->  
@@ -254,24 +254,18 @@
                             <div class="col-md-3">
                                 <!-- Carousel
                                 ================================================== -->
-                                <div id="carousel-{contentObjectData.uid}" class="carousel slide">
+                                <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide">
                                     <div class="carousel-inner">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
-                                        <figure class="item">
-                                            <f:render partial="List/ItemNumberedIndicators" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                                        </figure>
+                                            <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
+                                                <f:render partial="List/ItemNumberedIndicators" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                            </div>
                                         </f:for>
-                                        <figure class="item">
-                                            <img src="http://placehold.it/300x200/" alt="Slide2">
-                                        </figure>
-                                        <figure class="item">
-                                            <img src="http://placehold.it/300x200/" alt="Slide3">
-                                        </figure>
                                     </div>
                                     <!-- Indicators -->
                                     <ol class="carousel-indicators">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
-                                            <li data-target="#carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
+                                            <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
                                         </f:for>
                                     </ol>
                                 </div><!-- End Carousel -->
@@ -287,19 +281,19 @@
                             <div class="col-md-3">
                                 <!-- Carousel
                                 ================================================== -->
-                                <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-ride="carousel">
+                                <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide" data-ride="carousel">
                                 
                                     <div class="carousel-inner">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
-                                            <div class="item">
+                                            <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
                                                 <f:render partial="List/ItemLabledProducts" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
                                             </div><!-- End Item -->
                                         </f:for>                               
                                     </div><!-- End Carousel Inner -->
                                   
                                     <div class="carousel-controls">
-                                        <a class="left carousel-control" href="#carousel-{contentObjectData.uid}" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-                                        <a class="right carousel-control" href="#carousel-{contentObjectData.uid}" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                                        <a class="left carousel-control" href="#twbs-carousel-{contentObjectData.uid}" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                                        <a class="right carousel-control" href="#twbs-carousel-{contentObjectData.uid}" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
                                     </div>
                                 </div><!-- /.carousel -->
                             </div>
@@ -315,22 +309,16 @@
                                 <h3>Headline</h3>
                                 <!-- Carousel
                                 ================================================== -->
-                                <div id="carousel-{contentObjectData.uid}" class="carousel slide">
+                                <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide">
                                     <div class="carousel-inner">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
-                                            <figure class="item">
+                                            <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
                                                 <f:render partial="List/ItemHeaderControls" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                                            </figure>
+                                            </div>
                                         </f:for>
-                                        <figure class="item">
-                                            <img class="thumbnail" src="http://placehold.it/300x200/" alt="slide2">
-                                         </figure>
-                                        <figure class="item">
-                                            <img class="thumbnail" src="http://placehold.it/300x200/" alt="slide3">
-                                        </figure>
                                     </div>
-                                    <a class="carousel-control left" href="#carousel-{contentObjectData.uid}" data-slide="prev"><i class="fa fa-angle-double-left"></i></a>
-                                    <a class="carousel-control right" href="#carousel-{contentObjectData.uid}" data-slide="next"><i class="fa fa-angle-double-right"></i></a>                                   
+                                    <a class="carousel-control left" href="#twbs-carousel-{contentObjectData.uid}" data-slide="prev"><i class="fa fa-angle-double-left"></i></a>
+                                    <a class="carousel-control right" href="#twbs-carousel-{contentObjectData.uid}" data-slide="next"><i class="fa fa-angle-double-right"></i></a>                                   
                                 </div><!-- End Carousel -->  
                             </div>
                         </div>
@@ -344,10 +332,10 @@
                             <div class="well">
                                 <!-- Carousel
                                 ================================================== -->            
-                                <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">
+                                <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">
                                     <div class="carousel-inner">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
-                                            <div class="item">
+                                            <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
                                                 <div class="row">
                                                     <div class="col-md-3">
                                                         <f:render partial="List/ItemBoxedThumbnails" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
@@ -365,12 +353,12 @@
                                             </div>
                                         </f:for>
                                     </div>
-                                    <a class="left carousel-control" href="#carousel-{contentObjectData.uid}" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
-                                    <a class="right carousel-control" href="#carousel-{contentObjectData.uid}" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
+                                    <a class="left carousel-control" href="#twbs-carousel-{contentObjectData.uid}" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
+                                    <a class="right carousel-control" href="#twbs-carousel-{contentObjectData.uid}" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
                                     
                                     <ol class="carousel-indicators">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
-                                            <li data-target="#carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
+                                            <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
                                         </f:for>
                                     </ol>                
                                 </div><!-- End Carousel --> 
@@ -386,10 +374,10 @@
                             <div class="well">
                                 <!-- Carousel
                                 ================================================== -->            
-                                <div id="carousel-{contentObjectData.uid}" class="carousel slide">
+                                <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide">
                                     <div class="carousel-inner">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
-                                            <div class="item">
+                                            <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
                                                 <div class="row">
                                                     <div class="col-md-3">
                                                         <div class="thumbnail">
@@ -415,12 +403,12 @@
                                             </div>
                                         </f:for>
                                     </div>
-                                    <a class="left carousel-control" href="#carousel-{contentObjectData.uid}" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
-                                    <a class="right carousel-control" href="#carousel-{contentObjectData.uid}" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
+                                    <a class="left carousel-control" href="#twbs-carousel-{contentObjectData.uid}" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
+                                    <a class="right carousel-control" href="#twbs-carousel-{contentObjectData.uid}" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
                                     
                                     <ol class="carousel-indicators">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
-                                            <li data-target="#carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
+                                            <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
                                         </f:for>
                                     </ol>                
                                 </div><!-- End Carousel --> 
@@ -436,18 +424,18 @@
                             <div class="col-md-6">
                                 <!-- Carousel
                                 ================================================== -->
-                                <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">
+                                <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">
                                     <!-- Indicators -->
                                     <div class="carousel-inner">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
-                                            <div class="item">
+                                            <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
                                                 <f:render partial="List/ItemTestimonialCarousel" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
                                             </div>
                                         </f:for>
                                     </div>
                                     <div class="carousel-controls">
-                                        <a class="carousel-control left" href="#carousel-{contentObjectData.uid}" data-slide="prev"><span class="fa fa-angle-double-left"></span></a>
-                                        <a class="carousel-control right" href="#carousel-{contentObjectData.uid}" data-slide="next"><span class="fa fa-angle-double-right"></span></a>
+                                        <a class="carousel-control left" href="#twbs-carousel-{contentObjectData.uid}" data-slide="prev"><span class="fa fa-angle-double-left"></span></a>
+                                        <a class="carousel-control right" href="#twbs-carousel-{contentObjectData.uid}" data-slide="next"><span class="fa fa-angle-double-right"></span></a>
                                     </div>
                                 </div><!-- End Carousel -->  
                             </div>
@@ -458,11 +446,11 @@
                 <f:case value="541">
                     <!-- Carousel Tabbed Slider -->
                     <div class="container">
-                        <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-ride="carousel">
+                        <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide" data-ride="carousel">
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner">
                                 <f:for each="{news}" as="newsItem" iteration="iterator">
-                                    <div class="item">
+                                    <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
                                         <f:render partial="List/ItemTabbedSlider" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
                                     </div><!-- End Item -->
                                 </f:for>
@@ -470,7 +458,7 @@
 
                             <ul class="nav nav-pills nav-justified">
                                 <f:for each="{news}" as="newsItem" iteration="iterator">
-                                    <li data-target="#carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}>
+                                    <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}>
                                         <n:link newsItem="{newsItem}" settings="{settings}" class="" title="{newsItem.title}">
                                             <f:translate key="more-link"/>
                                         </n:link>
@@ -489,10 +477,10 @@
                             <div class="col-md-4">
                                 <!-- Carousel
                                 ================================================== -->
-                                <div id="carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">        
+                                <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">        
                                     <div class="carousel-inner">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
-                                            <div class="item">
+                                            <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
                                                 <f:render partial="List/ItemNewsBox" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
                                             </div>
                                         </f:for>                                                                 
@@ -500,7 +488,7 @@
                                     <!-- Indicators -->
                                     <ol class="carousel-indicators">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
-                                            <li data-target="#carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
+                                            <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
                                         </f:for>
                                     </ol>                                                                 
                                 </div><!-- End Carousel -->  
