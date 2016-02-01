@@ -24,3 +24,9 @@ plugin.tx_news {
         }
     }
 }
+
+page{
+    includeJSLibsfooter{
+        jqueryCarouselsNormalize = EXT:news_gabarits/Resources/Public/JavaScript/Libs/NormalisationCasousels.js
+    }
+}
