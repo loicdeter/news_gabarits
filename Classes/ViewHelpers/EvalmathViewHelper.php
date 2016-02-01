@@ -24,8 +24,6 @@ de Costa Rica S.A.
   *
   *  This copyright notice MUST APPEAR in all copies of the script!
   ***************************************************************/
-
-  use \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
   
 /**
   * Evaluates a String as mathematical expression.
@@ -45,14 +43,13 @@ de Costa Rica S.A.
   */
 class evalmathViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
 
-	/**
-	 * Evaluates a String as a mathematical expression.
-	 *
-	 * @author Braulio J. Solano-Rojas <braulio at solsoft.biz>
+    /**
+     * Evaluates a String as a mathematical expression.
+     *
+     * @author Braulio J. Solano-Rojas <braulio at solsoft.biz>
      * @see http://lists.typo3.org/pipermail/typo3-project-typo3v4mvc/2011-February/008414.html
-	 */
+     */
 	public function render() {
-        return 'COUCOU';
 		$stringToEval = $this->renderChildren();
 		$m = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('EvalMath');
 		// basic evaluation:
