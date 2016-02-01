@@ -1,5 +1,9 @@
 # news_gabarits
 
+## Installation
+### ligne de commande
+```git clone --recursive https://github.com/loicdeter/news_gabarits.git```
+
 ## Carousels disponibles
 
 ###
