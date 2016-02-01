@@ -16,3 +16,7 @@ if (!defined('TYPO3_MODE')) {
 if (is_array($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY])) {
     $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] = serialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY]);
 }
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'CDG46.' . $_EXTKEY
+);

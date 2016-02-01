@@ -1,5 +1,5 @@
 <?php
-namespace CDG46\News\ViewHelpers;
+namespace CDG46\NewsGabarits\ViewHelpers;
 
 /***************************************************************
   *  Copyright notice
@@ -52,6 +52,7 @@ class evalmathViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHe
      * @see http://lists.typo3.org/pipermail/typo3-project-typo3v4mvc/2011-February/008414.html
 	 */
 	public function render() {
+        return 'COUCOU';
 		$stringToEval = $this->renderChildren();
 		$m = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('EvalMath');
 		// basic evaluation:
