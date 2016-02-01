@@ -30,3 +30,37 @@ page{
         jqueryCarouselsNormalize = EXT:news_gabarits/Resources/Public/JavaScript/Libs/NormalisationCasousels.js
     }
 }
+
+[ 500 = settings.templateLayout ]
+    page.includeCSS.twbscarousel = EXT:/news_gabarits/Resources/Public/Less/BackgroundCarousel.less
+[ 501 = settings.templateLayout ]
+    page.includeCSS.twbscarousel = EXT:/news_gabarits/Resources/Public/Less/FullsizeHeader.less
+[ 510 = settings.templateLayout ]
+    page.includeCSS.twbscarousel = EXT:/news_gabarits/Resources/Public/Less/NewsCarousel.less
+[ 511 = settings.templateLayout ]
+    page.includeCSS.twbscarousel = EXT:/news_gabarits/Resources/Public/Less/SimpleCaption.less
+[ 512 = settings.templateLayout ]
+    page.includeCSS.twbscarousel = EXT:/news_gabarits/Resources/Public/Less/FullFeatureCarousel.less
+[ 513 = settings.templateLayout ]
+    page.includeCSS.twbscarousel = EXT:/news_gabarits/Resources/Public/Less/ThumbnailNavigation.less
+[ 520 = settings.templateLayout ]
+    page.includeCSS.twbscarousel = EXT:/news_gabarits/Resources/Public/Less/SimpleIndicators.less
+[ 521 = settings.templateLayout ]
+    page.includeCSS.twbscarousel = EXT:/news_gabarits/Resources/Public/Less/SimpleControls.less
+[ 522 = settings.templateLayout ]
+    page.includeCSS.twbscarousel = EXT:/news_gabarits/Resources/Public/Less/NumberedIndicators.less
+[ 523 = settings.templateLayout ]
+    page.includeCSS.twbscarousel = EXT:/news_gabarits/Resources/Public/Less/LabledProducts.less
+[ 524 = settings.templateLayout ]
+    page.includeCSS.twbscarousel = EXT:/news_gabarits/Resources/Public/Less/HeaderControls.less
+[ 530 = settings.templateLayout ]
+    page.includeCSS.twbscarousel = EXT:/news_gabarits/Resources/Public/Less/BoxedThumbnails.less
+[ 531 = settings.templateLayout ]
+    page.includeCSS.twbscarousel = EXT:/news_gabarits/Resources/Public/Less/ProductSlide.less
+[ 540 = settings.templateLayout ]
+    page.includeCSS.twbscarousel = EXT:/news_gabarits/Resources/Public/Less/TestimonialCarousel.less
+[ 541 = settings.templateLayout ]
+    page.includeCSS.twbscarousel = EXT:/news_gabarits/Resources/Public/Less/TabbedSlider.less
+[ 542 = settings.templateLayout ]
+    page.includeCSS.twbscarousel = EXT:/news_gabarits/Resources/Public/Less/NewsBox.less
+[global]
