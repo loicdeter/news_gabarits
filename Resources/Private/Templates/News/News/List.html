@@ -269,7 +269,7 @@
                 <f:case value="524">
                     <!-- Carousel Header Controls 
                     ================================================== -->
-                    <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide">
+                    <div id="twbs-carousel-HeaderControls-{contentObjectData.uid}" class="carousel slide">
                         <div class="carousel-inner">
                             <f:for each="{news}" as="newsItem" iteration="iterator">
                                 <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
@@ -277,8 +277,8 @@
                                 </div>
                             </f:for>
                         </div>
-                        <a class="carousel-control left" href="#twbs-carousel-{contentObjectData.uid}" data-slide="prev"><i class="fa fa-angle-double-left"></i></a>
-                        <a class="carousel-control right" href="#twbs-carousel-{contentObjectData.uid}" data-slide="next"><i class="fa fa-angle-double-right"></i></a>                                   
+                        <a class="carousel-control left" href="#twbs-carousel-HeaderControls-{contentObjectData.uid}" data-slide="prev"><i class="fa fa-angle-double-left"></i></a>
+                        <a class="carousel-control right" href="#twbs-carousel-HeaderControls-{contentObjectData.uid}" data-slide="next"><i class="fa fa-angle-double-right"></i></a>                                   
                     </div>
                     <!-- Fin Carousel Header Controls -->
                 </f:case>
