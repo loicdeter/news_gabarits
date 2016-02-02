@@ -118,7 +118,7 @@
                 </f:case>
                 <f:case value="511">
                     <!-- Carousel Simple Caption -->
-                    <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">
+                    <div id="twbs-carousel-SimpleCaption-{contentObjectData.uid}" class="carousel slide" data-interval="4000">
                         <div class="carousel-inner">           
                             <f:for each="{news}" as="newsItem" iteration="iterator">
                                 <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
@@ -127,8 +127,8 @@
                             </f:for>
                         </div>          
                         <div class="carousel-controls">
-                            <a class="left carousel-control" href="#twbs-carousel-{contentObjectData.uid}" data-slide="prev"><i class="fa fa-angle-double-left fa-lg"></i></a>
-                            <a class="right carousel-control" href="#twbs-carousel-{contentObjectData.uid}" data-slide="next"><i class="fa fa-angle-double-right fa-lg"></i></a>
+                            <a class="left carousel-control" href="#twbs-carousel-SimpleCaption-{contentObjectData.uid}" data-slide="prev"><i class="fa fa-angle-double-left fa-lg"></i></a>
+                            <a class="right carousel-control" href="#twbs-carousel-SimpleCaption-{contentObjectData.uid}" data-slide="next"><i class="fa fa-angle-double-right fa-lg"></i></a>
                         </div>
                     </div>
                     <!-- Fin Carousel Simple Caption -->
