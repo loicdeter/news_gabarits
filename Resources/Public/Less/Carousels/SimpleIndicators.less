@@ -17,4 +17,12 @@ div[id^="twbs-carousel-SimpleIndicators-"]{
             border-color:#3276b1;
         }
     }
+    .carousel-inner {
+        > .item{
+            height : 0;
+            @media (min-width: @screen-md) {
+              height: 0;
+            }
+        }
+    }
 }
