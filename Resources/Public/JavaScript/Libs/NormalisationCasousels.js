@@ -26,12 +26,13 @@
                 items.each(function() { //add heights to array
                     heights.push($(this).height()); 
                 });
-                tallest = Math.max.apply(null, heights); //cache largest value
+                tallest = Math.max.apply(0, heights); //cache largest value
                 items.each(function() {
                     $(this).css('min-height',tallest + 'px');
                 });
             };
             normalizeHeights();
+            heights.length = 0;
 
             $(window).on('resize orientationchange', function () {
                 tallest = 0, heights.length = 0; //reset vars
