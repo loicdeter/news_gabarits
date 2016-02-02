@@ -1,13 +1,10 @@
-############
-### PAGE ###
-############
-page {
-	fluidtemplate {
-		# cat=bootstrap package: advanced/100/100; type=string; label=Layout Root Path: Path to layouts
-		layoutRootPath = EXT:news_gabarits/Resources/Private/Layouts/Page/
-		# cat=bootstrap package: advanced/100/110; type=string; label=Partial Root Path: Path to partials
-		partialRootPath = EXT:news_gabarits/Resources/Private/Partials/Page/
-		# cat=bootstrap package: advanced/100/120; type=string; label=Template Root Path: Path to templates
-		templateRootPath = EXT:news_gabarits/Resources/Private/Templates/Page/
+plugin.tx_news {
+	view {
+		# cat=plugin.tx_news/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:news/Resources/Private/Templates/
+		# cat=plugin.tx_news/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:news/Resources/Private/Partials/
+		# cat=plugin.tx_news/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:news/Resources/Private/Layouts/
 	}
 }
