@@ -349,7 +349,7 @@
                 <f:case value="531">
                     <!-- Carousel Product Slide
                     ================================================== -->            
-                    <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide">
+                    <div id="twbs-carousel-ProductSlide-{contentObjectData.uid}" class="carousel slide">
                         <div class="carousel-inner">
                             <f:for each="{news}" as="newsItem" iteration="iterator">
                             
@@ -398,15 +398,15 @@
                                 
                             </f:for>
                         </div>
-                        <a class="left carousel-control" href="#twbs-carousel-{contentObjectData.uid}" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
-                        <a class="right carousel-control" href="#twbs-carousel-{contentObjectData.uid}" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
+                        <a class="left carousel-control" href="#twbs-carousel-ProductSlide-{contentObjectData.uid}" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
+                        <a class="right carousel-control" href="#twbs-carousel-ProductSlide-{contentObjectData.uid}" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
                         
                         <ol class="carousel-indicators">
                             <f:for each="{news}" as="newsItem" iteration="iterator">
                                 <f:cycle values="{0: '1', 1:'', 2:'', 3:''}" as="indicator">
                                     <f:if condition="{indicator} == 1">
                                         <f:then>
-                                            <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="<m:evalmath>{iterator.index}/4</m:evalmath>"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
+                                            <li data-target="#twbs-carousel-ProductSlide-{contentObjectData.uid}" data-slide-to="<m:evalmath>{iterator.index}/4</m:evalmath>"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
                                         </f:then>
                                     </f:if>
                                 </f:cycle>
