@@ -187,11 +187,11 @@
                 <f:case value="520">
                     <!-- Carousel Simple Indicators
                     ================================================== -->
-                    <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide">
+                    <div id="twbs-carousel-SimpleIndicators-{contentObjectData.uid}" class="carousel slide">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
                             <f:for each="{news}" as="newsItem" iteration="iterator">
-                                <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
+                                <li data-target="#twbs-carousel-SimpleIndicators-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
                             </f:for>
                         </ol>
                         <!-- Indicators -->            
