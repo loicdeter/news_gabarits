@@ -95,7 +95,7 @@
 
                     <ul class="list-group col-sm-4">
                         <f:for each="{news}" as="newsItem" iteration="iterator">
-                            <li data-target="#twbs-carousel-NewsCarousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}>
+                            <li data-target="#twbs-carousel-NewsCarousel-{contentObjectData.uid}" data-slide-to="{iterator.index}" class="list-group-item {f:if(condition:iterator.isFirst, then:' active')}">
                                 <h4>
                                     {newsItem.title}
                                 </h4>
