@@ -229,7 +229,7 @@
                 <f:case value="522">
                     <!-- Carousel Numbered Indicators
                     ================================================== -->
-                    <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide">
+                    <div id="twbs-carousel-NumberedIndicators-{contentObjectData.uid}" class="carousel slide">
                         <div class="carousel-inner">
                             <f:for each="{news}" as="newsItem" iteration="iterator">
                                 <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
@@ -240,7 +240,7 @@
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
                             <f:for each="{news}" as="newsItem" iteration="iterator">
-                                <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
+                                <li data-target="#twbs-carousel-NumberedIndicators-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
                             </f:for>
                         </ol>
                     </div>
