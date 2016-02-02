@@ -175,7 +175,7 @@
                             <ol class="carousel-indicators visible-lg visible-md">
                                 <f:for each="{news}" as="newsItem" iteration="iterator">
                                     <li data-target="#twbs-carousel-ThumbnailNavigation-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}>
-                                        <f:render partial="List/ItemThumbnailNavigation" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                        <f:render partial="List/ItemThumbnailNavigationNavigators" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
                                     </li>
                                 </f:for>
                             </ol>
