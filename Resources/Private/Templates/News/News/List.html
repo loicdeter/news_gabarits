@@ -135,7 +135,7 @@
                 </f:case>
                 <f:case value="512">
                     <!-- Full-Feature Carousel -->
-                    <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">
+                    <div id="twbs-carousel-FullFeatureCarousel-{contentObjectData.uid}" class="carousel slide" data-interval="4000">
                         <div class="carousel-inner">
                             <f:for each="{news}" as="newsItem" iteration="iterator">
                                 <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
@@ -146,16 +146,16 @@
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
                            <f:for each="{news}" as="newsItem" iteration="iterator">
-                               <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
+                               <li data-target="#twbs-carousel-FullFeatureCarousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
                            </f:for>
                         </ol>
                         <!-- Indicators -->
                         <!-- Controls -->
                         <div class="carousel-controls">
-                            <a class="carousel-control left" href="#twbs-carousel-{contentObjectData.uid}" data-slide="prev">
+                            <a class="carousel-control left" href="#twbs-carousel-FullFeatureCarousel-{contentObjectData.uid}" data-slide="prev">
                                 <span class="fa fa-angle-double-left"></span>
                             </a>
-                            <a class="carousel-control right" href="#twbs-carousel-{contentObjectData.uid}" data-slide="next">
+                            <a class="carousel-control right" href="#twbs-carousel-FullFeatureCarousel-{contentObjectData.uid}" data-slide="next">
                                 <span class="fa fa-angle-double-right"></span>
                             </a>
                         </div>
