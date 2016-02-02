@@ -1,20 +1,25 @@
 div[id^="twbs-carousel-SimpleControls-"] {
-    .carousel-indicators {
-        bottom:15px;
-        left:10px;
-        width:auto;
-        margin-left:0;
-        li {
-            border-radius:0;
-            width:8px;
-            height:8px;
-            background:#fff;
+    .carousel-control
+    .carousel-control
+    .carousel-control {
+        background:	#ddd;
+        color:#999;
+        padding: 4px 0;
+        width:26px;
+        top:auto;	
+        left:auto;
+        bottom:0;
+        opacity:1;
+        text-shadow:none;
+        &.left,
+        &.right {
+            background-image:none !important;
         }
-        .active {
-            width:10px;
-            height:10px;
-            background:#3276b1;
-            border-color:#3276b1;
+        &.right {
+            right: 10px;
+        }
+        &.left {
+            right: 40px;
         }
     }
 }
