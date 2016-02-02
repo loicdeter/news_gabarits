@@ -47,9 +47,9 @@
 $(document).CarouselsHeight();
 
 $(document).ready(function(){
-    $(div[id^="twbs-carousel-NewsCarousel-"]).each( function () {
+    $('div[id^="twbs-carousel-NewsCarousel-"]').each( function () {
         var clickEvent = false;
-            $(this).on('click', '.list-group li', function() {
+        $(this).on('click', '.list-group li', function() {
             clickEvent = true;
             $('.list-group li').removeClass('active');
             $(this).addClass('active');  
