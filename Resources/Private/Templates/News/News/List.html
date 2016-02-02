@@ -51,7 +51,7 @@
                 <f:case value="500">
                     <!-- Carousel Background -->
                     <div id="background-carousel">
-                        <div id="twbs-carousel-{contentObjectData.uid}" class="carousel slide" data-ride="carousel" data-pause="false">
+                        <div id="twbs-carousel-BackgroundCarousel-{contentObjectData.uid}" class="carousel slide" data-ride="carousel" data-pause="false">
                             <div class="carousel-inner">
                                 <f:for each="{news}" as="newsItem" iteration="iterator">
                                     <f:render partial="List/ItemBackgroundCarousel" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
