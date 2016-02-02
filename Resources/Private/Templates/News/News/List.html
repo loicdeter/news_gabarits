@@ -164,7 +164,7 @@
                 </f:case>
                 <f:case value="513">
                     <!-- Carousel Thumbnail Navigation -->
-                    <div class="carousel slide article-slide" id="twbs-carousel-{contentObjectData.uid}">
+                    <div class="carousel slide article-slide" id="twbs-carousel-ThumbnailNavigation-{contentObjectData.uid}">
                         <div class="carousel-inner cont-slider">
                             <f:for each="{news}" as="newsItem" iteration="iterator">
                                 <div class="item{f:if(condition:iterator.isFirst, then:' active')}">
@@ -174,7 +174,7 @@
                             <!-- Indicators -->
                             <ol class="carousel-indicators visible-lg visible-md">
                                 <f:for each="{news}" as="newsItem" iteration="iterator">
-                                    <li data-target="#twbs-carousel-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}>
+                                    <li data-target="#twbs-carousel-ThumbnailNavigation-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}>
                                         <f:render partial="List/ItemThumbnailNavigation" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
                                     </li>
                                 </f:for>
