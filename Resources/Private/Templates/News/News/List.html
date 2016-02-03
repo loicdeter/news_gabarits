@@ -238,7 +238,7 @@
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
                             <f:for each="{news}" as="newsItem" iteration="iterator">
-                                <li data-target="#twbs-carousel-NumberedIndicators-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}></li>
+                                <li data-target="#twbs-carousel-NumberedIndicators-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}>{iterator.cycle}</li>
                             </f:for>
                         </ol>
                     </div>
