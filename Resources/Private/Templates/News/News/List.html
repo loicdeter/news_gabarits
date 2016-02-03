@@ -450,7 +450,7 @@
                             <f:for each="{news}" as="newsItem" iteration="iterator">
                                 <li data-target="#twbs-carousel-TabbedSlider-{contentObjectData.uid}" data-slide-to="{iterator.index}"{f:if(condition:iterator.isFirst, then:' class="active"')}>
                                     <n:link newsItem="{newsItem}" settings="{settings}" class="" title="{newsItem.title}">
-                                        <f:translate key="more-link"/>
+                                        {newsItem.title}
                                     </n:link>
                                 </li>
                             </f:for>
