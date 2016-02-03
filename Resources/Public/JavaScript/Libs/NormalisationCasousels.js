@@ -23,6 +23,7 @@
 
         if (items.length) {
             function normalizeHeights() {
+                tallest = 0;
                 items.each(function() { //add heights to array
                     heights.push($(this).height()); 
                 });
