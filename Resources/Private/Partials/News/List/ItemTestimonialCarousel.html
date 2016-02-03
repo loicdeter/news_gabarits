@@ -6,15 +6,13 @@
 <n:excludeDisplayedNews newsItem="{newsItem}"/>
 
 <blockquote>
-    <p>
-        <f:if condition="{newsItem.teaser}">
-            <f:then>
-                {newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
-            </f:then>
-            <f:else>
-                {newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
-            </f:else>
-        </f:if>
-    </p>
+    <f:if condition="{newsItem.teaser}">
+        <f:then>
+            {newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
+        </f:then>
+        <f:else>
+            {newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
+        </f:else>
+    </f:if>
     <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
 </blockquote>

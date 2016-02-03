@@ -68,20 +68,16 @@
 
     </f:else>
 </f:if>
-    <h3 class="text-uppercase text-theme" title-xs>
-        <n:link newsItem="{newsItem}" settings="{settings}" title="Ouvrir {newsItem.title}">
-            {newsItem.title}
-        </n:link>
-    </h3>
-
-    <p class="text-theme">
-
-        <f:if condition="{newsItem.teaser}">
-            <f:then>
-                {newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
-            </f:then>
-            <f:else>
-                {newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
-            </f:else>
-        </f:if>
-    </p>
+<h3 class="text-uppercase text-theme" title-xs>
+    <n:link newsItem="{newsItem}" settings="{settings}" title="Ouvrir {newsItem.title}">
+        {newsItem.title}
+    </n:link>
+</h3>
+<f:if condition="{newsItem.teaser}">
+    <f:then>
+        {newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
+    </f:then>
+    <f:else>
+        {newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
+    </f:else>
+</f:if>
