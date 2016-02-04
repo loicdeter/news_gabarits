@@ -3,18 +3,24 @@
 ## Objectifs
 
 Cette extension propose une série de mises en page pour afficher les news (extension tx_news).
+
 Il s'appuie sur **{tx_news.view.templateLayout}** qu'il surcharge pour proposer un plus grand nombre de d'affichages pour les news.
 
 ## Manuel Utilisateur
 
 Insertion du plugin news.
+
 Configuration du plugin.
+
 Choix du template dans l'onglet template du plugin news, les mises en pages sont disponibles dans Template Layout.
 
 ## Installation
 ### ligne de commande
+
 Pour installer l'extension, vous devez la rendre disponible dans les extensions de la plateforme, pour cela, installer l'extension depuis le dépôt.
+
 ```git clone --recursive https://github.com/loicdeter/news_gabarits.git```
+
 Ensuite, activer l'extension dans le gestionnaire d'extensions
 
 ## Carousels disponibles
