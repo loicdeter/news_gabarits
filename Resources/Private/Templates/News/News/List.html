@@ -39,6 +39,22 @@
                     </div>
                     <!-- SLIDER END-->
                 </f:case>
+                <f:case value="110">
+                    <!-- SLICK CAROUSEL -->
+                    <div class="hero-unit-slider">
+                    <div id="carousel-{contentObjectData.uid}" class="slick-carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <f:for each="{news}" as="newsItem" iteration="iterator">
+                                <div class="item {f:if(condition:iterator.isFirst, then:' active')}">
+                                    <f:render partial="List/ItemSlickCarousel" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                </div>
+                            </f:for>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- SLICK CAROUSEL END -->
+                    <div class="clearfix margin-bottom-30px"></div>
+                </f:case>
                 <f:case value="200">
                     <div id="owl-ortfolio-item-{contentObjectData.uid}" class="owl-carousel">
                         <f:for each="{news}" as="newsItem" iteration="iterator">
@@ -47,6 +63,18 @@
                             </div>
                         </f:for>
                     </div>
+                </f:case>
+                <f:case value="300">
+                    <!-- FIL INFO -->
+                    <div id="fil-info-item-{contentObjectData.uid}" class="fil-info">
+                        <h2>Fil d'info</h2>
+                        <f:for each="{news}" as="newsItem" iteration="iterator">
+                            <div class="item">
+                                <f:render partial="List/ItemInfo" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                            </div>
+                        </f:for>
+                    </div>
+                    <!-- FIL INFO END -->
                 </f:case>
                 <f:case value="500">
                     <!-- Carousel Background -->

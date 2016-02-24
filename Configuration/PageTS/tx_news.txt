@@ -1,5 +1,6 @@
 tx_news.templateLayouts {
     100 = Carousel
+    110 = Hero Unit
     200 = Multiple Slides (X)
     300 = Item Info
     500 = Background Carousel
