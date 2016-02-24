@@ -26,8 +26,9 @@ Ensuite, activer l'extension dans le gestionnaire d'extensions
 ## Carousels disponibles
 
 ###
-* 100
-* 200
+* 100 **Carousel**
+* 200 **  **
+* 300 **Item Info**
 
 ### Carousels bootstrap de [sevenX.de](http://sevenx.de/demo/bootstrap-carousel/index.html)
 

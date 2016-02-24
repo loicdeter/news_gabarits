@@ -1,7 +1,7 @@
 tx_news.templateLayouts {
     100 = Carousel
-    200 = Multiple Slides
-    300 = ItemInfo
+    200 = Multiple Slides (X)
+    300 = Item Info
     500 = Background Carousel
     501 = Fullsize Header
     510 = News Carousel
