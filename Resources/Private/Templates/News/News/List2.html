@@ -48,6 +48,18 @@
                         </f:for>
                     </div>
                 </f:case>
+                <f:case value="300">
+                    <!-- FIL INFO -->
+                    <div id="fil-info-item-{contentObjectData.uid}" class="fil-info">
+                        <h2>Fil d'info</h2>
+                        <f:for each="{news}" as="newsItem" iteration="iterator">
+                            <div class="item">
+                                <f:render partial="List/ItemInfo" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                            </div>
+                        </f:for>
+                    </div>
+                    <!-- FIL INFO END -->
+                </f:case>
                 <f:case value="500">
                     <!-- Carousel Background -->
                     <div id="background-carousel">

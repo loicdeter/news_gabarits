@@ -8,7 +8,7 @@
 
 .. _links:
 
-Links
+Liens
 -----
 
 :TER:
@@ -18,7 +18,10 @@ Links
 	https://forge.typo3.org/projects/extension-<extension key>/issues
 
 :Git Repository:
-	https://github.com/<username>/<extension key>
+	https://github.com/loicdeter/news_gabarits
 
 :Contact:
 	`@<username> <https://twitter.com/your-username>`__
+
+:tx_news:
+	https://typo3.org/extensions/repository/view/news

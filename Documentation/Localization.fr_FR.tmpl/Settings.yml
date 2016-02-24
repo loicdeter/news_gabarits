@@ -4,15 +4,15 @@
 
 ---
 conf.py:
-  copyright: 2016
+  copyright: '2016
   project: news_gabarits (Français)
-  version: 0.0
-  release: 0.0.1
+  version: '0.0
+  release: '0.0.1
   latex_documents:
   - - Index
     - news_gabarits.tex
     - news_gabarits
-    - LoÃ¯c de Terwangne
+    - Loïc de Terwangne
     - manual
   latex_elements:
     papersize: a4paper

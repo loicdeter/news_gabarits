@@ -18,25 +18,25 @@ news_gabarits
 		extension_key
 
 	:Version:
-		|release|
+		'0.0.1
 
 	:Language:
-		en
+		fr
 
 	:Description:
-		enter description.
+		Série de mises en page pour afficher les news(tx_news).
 
 	:Keywords:
 		comma,separated,list,keywords
 
 	:Copyright:
-		2016
+		'2016
 
 	:Author:
-		LoÃ¯c de Terwangne
+		Loïc de Terwangne
 
 	:Email:
-		author@example.com
+		loic.deterwangne@gmail.com
 
 	:License:
 		This document is published under the Open Publication License

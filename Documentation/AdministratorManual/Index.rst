@@ -8,15 +8,17 @@
 
 .. _admin-manual:
 
-Administrator Manual
-====================
+Manuel d'administration
+=======================
 
-Describes how to manage the extension from an administrator’s point of
-view. That relates to Page/User TSconfig, permissions, configuration
-etc., which administrator level users have access to.
+Prérequis
+---------
 
-Language should be non/semi-technical, explaining, using small
-examples.
+Inclure l'extension dans le gabarit du site.
+
+.. figure:: ../Images/AdministratorManual/templateInclusion.png
+	:width: 500px
+	:alt: Template
 
 Target group: **Administrators**
 
@@ -24,18 +26,30 @@ Target group: **Administrators**
 Installation
 ------------
 
-How should the extension be set up? E.g. is there a static template to include?
+Pour installer l'extension, vous devez la rendre disponible dans les extensions de la plateforme, pour cela, installer l'extension depuis le dépôt.
 
-.. figure:: ../Images/AdministratorManual/ExtensionManager.png
+.. code-block:: shell
+	:linenos:
+
+	$ cd typo3conf/ext/
+	$ git clone --recursive https://github.com/loicdeter/news_gabarits.git
+
+
+Ensuite, activer l'extension dans le gestionnaire d'extensions
+
+.. figure:: ../Images/AdministratorManual/extensionManager.png
 	:width: 500px
 	:alt: Extension Manager
 
-	Extension Manager (caption of the image)
+	Extension Manager
 
-	List of extensions within the Extension Manager also shortend as "EM" (legend of the image)
+
+	List of extensions within the Extension Manager also shortend as "EM"
 
 
 FAQ
 ^^^
 
-Possible subsection: FAQ
+Que dois-je faire si je veux une mise à jour automatique de l'extension dans les versions supérieures ?
+
+Il suffit de mettre un script sur le serveur qui permet une git pull avec les versions supérieures
