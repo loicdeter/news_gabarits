@@ -30,6 +30,7 @@ Ensuite, activer l'extension dans le gestionnaire d'extensions
 * 110 **Hero Unit**
 * 200 **Multiple Slides**
 * 300 **Item Info**
+* 400 **Deux Colonnes**
 
 ### Carousels bootstrap de [sevenX.de](http://sevenx.de/demo/bootstrap-carousel/index.html)
 

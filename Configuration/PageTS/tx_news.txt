@@ -3,6 +3,7 @@ tx_news.templateLayouts {
     110 = Hero Unit
     200 = Multiple Slides (X)
     300 = Item Info
+    400 = Deux Colonnes
     500 = Background Carousel
     501 = Fullsize Header
     510 = News Carousel

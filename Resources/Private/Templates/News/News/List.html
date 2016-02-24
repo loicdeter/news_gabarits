@@ -76,6 +76,21 @@
                     </div>
                     <!-- FIL INFO END -->
                 </f:case>
+                <f:case value="400">
+                    <!-- DEUX COLONNES -->
+                    <div id="deux-colonnes-item-{contentObjectData.uid}" class="deux-colonnes">
+                        <div class="row">
+                            <f:for each="{news}" as="newsItem" iteration="iterator">
+                                <div class="col-md-6">
+                                    <div class="item">
+                                        <f:render partial="List/ItemDeuxColonnes" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                    </div>
+                                </div>
+                             </f:for>
+                        </div>
+                    </div>
+                    <!-- DEUX COLONNES END -->
+                </f:case>
                 <f:case value="500">
                     <!-- Carousel Background -->
                     <div id="background-carousel">
