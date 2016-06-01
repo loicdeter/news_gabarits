@@ -14,13 +14,13 @@ plugin.tx_news {
         partialRootPaths {
             0 = EXT:news/Resources/Private/Partials/
             1 = EXT:news_gabarits/Resources/Private/Partials/News/
-            2 = {plugin.tx_news.view.templateRootPath}
+            2 = {plugin.tx_news.view.partialRootPath}
         }
         layoutRootPaths >
         layoutRootPaths {
             0 = EXT:news/Resources/Private/Layouts/
-#            1 = EXT:news_gabarits/Resources/Private/Layouts/
-            2 = {plugin.tx_news.view.templateRootPath}
+            1 = EXT:news_gabarits/Resources/Private/Layouts/
+            2 = {plugin.tx_news.view.layoutRootPath}
         }
     }
 }
